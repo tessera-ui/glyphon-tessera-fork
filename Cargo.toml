@@ -3,8 +3,8 @@ name = "glyphon-tessera-fork"
 description = "Fast, simple 2D text rendering for wgpu"
 version = "0.9.0"
 edition = "2021"
-homepage = "https://github.com/grovesNL/glyphon.git"
-repository = "https://github.com/grovesNL/glyphon"
+homepage = "https://github.com/shadow3aaa/tessera"
+repository = "https://github.com/shadow3aaa/tessera"
 license = "MIT OR Apache-2.0 OR Zlib"
 
 [dependencies]
