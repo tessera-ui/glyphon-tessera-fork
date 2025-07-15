@@ -1,15 +1,15 @@
 <h1 align="center">
-  🦅 glyphon 🦁
+  🦅 glyphon-tessera-fork 🦁
 </h1>
 <div align="center">
   Fast, simple 2D text rendering for <a href="https://github.com/gfx-rs/wgpu/"><code>wgpu</code></a>
 </div>
 <br />
 <div align="center">
-  <a href="https://crates.io/crates/glyphon"><img src="https://img.shields.io/crates/v/glyphon.svg?label=glyphon" alt="crates.io"></a>
-  <a href="https://docs.rs/glyphon"><img src="https://docs.rs/glyphon/badge.svg" alt="docs.rs"></a>
+  <a href="https://crates.io/crates/glyphon-tessera-fork"><img src="https://img.shields.io/crates/v/glyphon-tessera-fork.svg?label=glyphon" alt="crates.io"></a>
+  <a href="https://docs.rs/glyphon_tessera_fork"><img src="https://docs.rs/glyphon_tessera_fork/badge.svg" alt="docs.rs"></a>
   <img src="https://img.shields.io/badge/min%20rust-1.60-green.svg" alt="Minimum Rust Version">
-  <a href="https://github.com/grovesNL/glyphon/actions"><img src="https://github.com/grovesNL/glyphon/workflows/CI/badge.svg?branch=main" alt="Build Status" /></a>
+  <a href="https://github.com/grovesNL/glyphon/actions"><img src="https://github.com/shadow3aaa/glyphon-tessera-fork/workflows/CI/badge.svg?branch=main" alt="Build Status" /></a>
 </div>
 
 ## What is this?
