@@ -1,6 +1,6 @@
 use cosmic_text::{Attrs, Buffer, Color, Family, FontSystem, Metrics, Shaping, SwashCache};
 use criterion::{criterion_group, criterion_main, Criterion};
-use glyphon::{
+use glyphon_tessera_fork::{
     Cache, ColorMode, Resolution, TextArea, TextAtlas, TextBounds, TextRenderer, Viewport, Weight,
 };
 use wgpu::{MultisampleState, TextureFormat};
@@ -64,7 +64,7 @@ fn run_bench(ctx: &mut Criterion) {
                 .collect(),
         ),
     ] {
-        let buffers: Vec<glyphon::Buffer> = text_areas
+        let buffers: Vec<glyphon_tessera_fork::Buffer> = text_areas
             .iter()
             .copied()
             .map(|s| {

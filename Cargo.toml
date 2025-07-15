@@ -1,5 +1,5 @@
 [package]
-name = "glyphon"
+name = "glyphon-tessera-fork"
 description = "Fast, simple 2D text rendering for wgpu"
 version = "0.9.0"
 edition = "2021"
@@ -11,15 +11,15 @@ license = "MIT OR Apache-2.0 OR Zlib"
 wgpu = { version = "26.0.1", default-features = false, features = ["wgsl"] }
 etagere = "0.2.10"
 cosmic-text = "0.14"
-lru = { version = "0.12.1", default-features = false }
+lru = { version = "0.16.0", default-features = false }
 rustc-hash = "2.1.1"
 
 [dev-dependencies]
 winit = "0.30.3"
 wgpu = "26.0.1"
-resvg = { version = "0.44", default-features = false }
+resvg = { version = "0.45.1", default-features = false }
 pollster = "0.4.0"
-criterion = { version = "0.5", features = ["html_reports"] }
+criterion = { version = "0.6.0", features = ["html_reports"] }
 
 [[bench]]
 name = "prepare"

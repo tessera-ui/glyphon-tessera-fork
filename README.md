@@ -20,7 +20,9 @@ This crate provides a simple way to render 2D text with [`wgpu`](https://github.
 - packing the glyphs into texture atlas (with [`etagere`](https://github.com/nical/etagere/))
 - sampling from the texture atlas to render text (with [`wgpu`](https://github.com/gfx-rs/wgpu/))
 
-To avoid extra render passes, rendering uses existing render passes (following the middleware pattern described in [`wgpu`'s Encapsulating Graphics Work wiki page](https://github.com/gfx-rs/wgpu/wiki/Encapsulating-Graphics-Work).
+To avoid extra render passes, rendering uses existing render passes (following the middleware pattern described in [`wgpu`'s Encapsulating Graphics Work wiki page](https://github.com/gfx-rs/wgpu/wiki/Encapsulating-Graphics-Work)).
+
+This is the forked version for ui framework [tessera](https://github.com/shadow3aaa/tessera)
 
 ## License
 

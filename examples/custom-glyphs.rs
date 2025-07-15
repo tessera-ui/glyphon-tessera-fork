@@ -1,4 +1,4 @@
-use glyphon::{
+use glyphon_tessera_fork::{
     Attrs, Buffer, Cache, Color, ContentType, CustomGlyph, Family, FontSystem, Metrics,
     RasterizeCustomGlyphRequest, RasterizedCustomGlyph, Resolution, Shaping, SwashCache, TextArea,
     TextAtlas, TextBounds, TextRenderer, Viewport,
@@ -30,10 +30,10 @@ struct WindowState {
     surface_config: SurfaceConfiguration,
     font_system: FontSystem,
     swash_cache: SwashCache,
-    viewport: glyphon::Viewport,
-    atlas: glyphon::TextAtlas,
-    text_renderer: glyphon::TextRenderer,
-    text_buffer: glyphon::Buffer,
+    viewport: glyphon_tessera_fork::Viewport,
+    atlas: glyphon_tessera_fork::TextAtlas,
+    text_renderer: glyphon_tessera_fork::TextRenderer,
+    text_buffer: glyphon_tessera_fork::Buffer,
     rasterize_svg: Box<dyn Fn(RasterizeCustomGlyphRequest) -> Option<RasterizedCustomGlyph>>,
     // Make sure that the winit window is last in the struct so that
     // it is dropped after the wgpu surface is dropped, otherwise the

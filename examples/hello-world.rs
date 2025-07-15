@@ -1,4 +1,4 @@
-use glyphon::{
+use glyphon_tessera_fork::{
     Attrs, Buffer, Cache, Color, Family, FontSystem, Metrics, Resolution, Shaping, SwashCache,
     TextArea, TextAtlas, TextBounds, TextRenderer, Viewport,
 };
@@ -26,10 +26,10 @@ struct WindowState {
 
     font_system: FontSystem,
     swash_cache: SwashCache,
-    viewport: glyphon::Viewport,
-    atlas: glyphon::TextAtlas,
-    text_renderer: glyphon::TextRenderer,
-    text_buffer: glyphon::Buffer,
+    viewport: glyphon_tessera_fork::Viewport,
+    atlas: glyphon_tessera_fork::TextAtlas,
+    text_renderer: glyphon_tessera_fork::TextRenderer,
+    text_buffer: glyphon_tessera_fork::Buffer,
 
     // Make sure that the winit window is last in the struct so that
     // it is dropped after the wgpu surface is dropped, otherwise the

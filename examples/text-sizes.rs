@@ -1,4 +1,4 @@
-use glyphon::{
+use glyphon_tessera_fork::{
     Attrs, Buffer, Cache, Color, ColorMode, Family, FontSystem, Metrics, Resolution, Shaping,
     SwashCache, TextArea, TextAtlas, TextBounds, TextRenderer, Viewport, Weight,
 };
@@ -45,10 +45,10 @@ struct WindowState {
 
     font_system: FontSystem,
     swash_cache: SwashCache,
-    viewport: glyphon::Viewport,
-    atlas: glyphon::TextAtlas,
-    text_renderer: glyphon::TextRenderer,
-    buffers: Vec<glyphon::Buffer>,
+    viewport: glyphon_tessera_fork::Viewport,
+    atlas: glyphon_tessera_fork::TextAtlas,
+    text_renderer: glyphon_tessera_fork::TextRenderer,
+    buffers: Vec<glyphon_tessera_fork::Buffer>,
 
     // Make sure that the winit window is last in the struct so that
     // it is dropped after the wgpu surface is dropped, otherwise the
@@ -108,7 +108,7 @@ impl WindowState {
         let attrs = Attrs::new().family(Family::SansSerif).weight(WEIGHT);
         let shaping = Shaping::Advanced;
 
-        let buffers: Vec<glyphon::Buffer> = SIZES
+        let buffers: Vec<glyphon_tessera_fork::Buffer> = SIZES
             .iter()
             .copied()
             .map(|s| {
