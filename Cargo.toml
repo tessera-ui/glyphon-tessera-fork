@@ -10,7 +10,7 @@ license = "MIT OR Apache-2.0 OR Zlib"
 [dependencies]
 wgpu = { version = "26.0.1", default-features = false, features = ["wgsl"] }
 etagere = "0.2.10"
-cosmic-text = { version = "0.14.3", package = "cosmic-text-tessera-fork" }
+cosmic-text = { version = "0.15.3", package = "cosmic-text-tessera-fork" }
 lru = { version = "0.16", default-features = false }
 rustc-hash = "2.1.1"
 
