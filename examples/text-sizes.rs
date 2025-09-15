@@ -122,6 +122,7 @@ impl WindowState {
                     &format!("size {s}: {TEXT}"),
                     &attrs,
                     shaping,
+                    None,
                 );
 
                 text_buffer.shape_until_scroll(&mut font_system, false);
