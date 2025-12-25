@@ -9,11 +9,12 @@ use std::{
 use wgpu::{
     BindGroup, BindGroupDescriptor, BindGroupEntry, BindGroupLayout, BindGroupLayoutEntry,
     BindingResource, BindingType, BlendState, Buffer, BufferBindingType, ColorTargetState,
-    ColorWrites, DepthStencilState, Device, FilterMode, FragmentState, MultisampleState,
-    PipelineCompilationOptions, PipelineLayout, PipelineLayoutDescriptor, PrimitiveState,
-    PrimitiveTopology, RenderPipeline, RenderPipelineDescriptor, Sampler, SamplerBindingType,
-    SamplerDescriptor, ShaderModule, ShaderModuleDescriptor, ShaderSource, ShaderStages,
-    TextureFormat, TextureSampleType, TextureView, TextureViewDimension, VertexFormat, VertexState,
+    ColorWrites, DepthStencilState, Device, FilterMode, FragmentState, MipmapFilterMode,
+    MultisampleState, PipelineCompilationOptions, PipelineLayout, PipelineLayoutDescriptor,
+    PrimitiveState, PrimitiveTopology, RenderPipeline, RenderPipelineDescriptor, Sampler,
+    SamplerBindingType, SamplerDescriptor, ShaderModule, ShaderModuleDescriptor, ShaderSource,
+    ShaderStages, TextureFormat, TextureSampleType, TextureView, TextureViewDimension,
+    VertexFormat, VertexState,
 };
 
 /// A cache to share common resources (e.g., pipelines, layouts, shaders) between multiple text
@@ -46,7 +47,7 @@ impl Cache {
             label: Some("glyphon sampler"),
             min_filter: FilterMode::Nearest,
             mag_filter: FilterMode::Nearest,
-            mipmap_filter: FilterMode::Nearest,
+            mipmap_filter: MipmapFilterMode::Nearest,
             lod_min_clamp: 0f32,
             lod_max_clamp: 0f32,
             ..Default::default()
@@ -143,7 +144,7 @@ impl Cache {
         let pipeline_layout = device.create_pipeline_layout(&PipelineLayoutDescriptor {
             label: None,
             bind_group_layouts: &[&atlas_layout, &uniforms_layout],
-            push_constant_ranges: &[],
+            immediate_size: 0,
         });
 
         Self(Arc::new(Inner {
@@ -241,7 +242,7 @@ impl Cache {
                     },
                     depth_stencil: depth_stencil.clone(),
                     multisample,
-                    multiview: None,
+                    multiview_mask: None,
                     cache: None,
                 });
 

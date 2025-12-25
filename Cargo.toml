@@ -8,15 +8,15 @@ repository = "https://github.com/shadow3aaa/glyphon-tessera-fork"
 license = "MIT OR Apache-2.0 OR Zlib"
 
 [dependencies]
-wgpu = { version = "27.0.1", default-features = false, features = ["wgsl"] }
+wgpu = { version = "28.0.0", default-features = false, features = ["wgsl"] }
 etagere = "0.2.10"
 cosmic-text = { version = "0.15.5", package = "cosmic-text-tessera-fork" }
-lru = { version = "0.16.1", default-features = false }
+lru = { version = "0.16.2", default-features = false }
 rustc-hash = "2.1.1"
 
 [dev-dependencies]
 winit = "0.30.12"
-wgpu = "27.0.1"
+wgpu = "28.0.0"
 resvg = { version = "0.45.1", default-features = false }
 pollster = "0.4.0"
 criterion = { version = "0.7.0", features = ["html_reports"] }
